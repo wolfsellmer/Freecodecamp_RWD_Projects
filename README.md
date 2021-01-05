@@ -4,7 +4,7 @@ PT - Projeto de conclusão do curso Resposive Web Design by freeCodeCamp
 
 EN - Project Completion of the Responsive Web Design course by freeCodeCamp
 
-## Detalhes
+## Detalhes - Details
 
 Contruir uma Pagina de tributo<br>
 Contrir un formulario de pesquisa<br>
