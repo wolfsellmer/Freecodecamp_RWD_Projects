@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="technical.css">
+    <title>Document</title>
+</head>
+<body>
+    <nav id="navbar">
+    <header>JavaScript basics</header>
+        <ul>
+            <li><a class="nav-link" href="#introduction">Introduction</a></li>
+            <li>
+            <a class="nav-link" href="#a_hello_world!_example">A Hello world! example</a>
+            </li>
+            <li>
+            <a class="nav-link" href="#language_basics_crash_course">Language basics crash course</a>
+            </li>
+            <li><a class="nav-link" href="#variables">Variables</a></li>
+            <li><a class="nav-link" href="#comments">Comments</a></li>
+            <li>
+            <a class="nav-link" href="#operators">Operators</a>
+            </li>
+            <li>
+            <a class="nav-link" href="#reference">Reference</a>
+            </li>
+        </ul>
+    </nav>
+    <main id="main-doc">
+        <section class="main-section" id="introduction">
+            <header>Introduction</header>
+            <article>
+            <p>
+                JavaScript ("JS" for short) is a full-fledged dynamic programming language 
+                that can add interactivity to a website. It was invented by Brendan Eich 
+                (co-founder of the Mozilla project, the Mozilla Foundation, and 
+                the Mozilla Corporation).
+            </p>
+
+            <p>
+                JavaScript is versatile and beginner-friendly. With more experience, you'll 
+                be able to create games, animated 2D and 3D graphics, comprehensive 
+                database-driven apps, and much more!
+            </p>
+            <p>
+                JavaScript itself is relatively compact, yet very flexible. Developers have 
+                written a variety of tools on top of the core JavaScript language, unlocking 
+                a vast amount of functionality with minimum effort. These include:
+            </p>
+            <ul>
+                <li>
+                Browser Application Programming Interfaces (APIs) built into web browsers, 
+                providing functionality such as dynamically creating HTML and setting CSS styles; 
+                collecting and manipulating a video stream from a user's webcam, or generating 
+                3D graphics and audio samples.
+                </li>
+                <li>
+                Third-party APIs that allow developers to incorporate functionality in sites 
+                from other content providers, such as Twitter or Facebook.
+                </li>
+                <li>
+                    Third-party frameworks and libraries that you can apply to HTML to accelerate 
+                    the work of building sites and applications.
+                </li>
+            </ul>
+            <p>
+                It's outside the scope of this article—as a light introduction to JavaScript—to 
+                present the details of how the core JavaScript language is different from the 
+                tools listed above. You can learn more in MDN's JavaScript learning area, 
+                as well as in other parts of MDN.
+            </p>
+            <p>
+                The section below introduces some aspects of the core language and offers an opportunity to 
+                play with a few browser API features too. Have fun!
+            </p>
+            </article>
+        </section>
+        <section class="main-section" id="a_hello_world!_example">
+            <header>A Hello world! example</header>
+            <article>
+            <p>JavaScript is one of the most popular modern web technologies! 
+                As your JavaScript skills grow, your websites will enter a 
+                new dimension of power and creativity.
+            </p>
+            <p>
+                However, getting comfortable with JavaScript is more challenging 
+                than getting comfortable with HTML and CSS. You may have to start small, 
+                and progress gradually. To begin, let's examine how to add JavaScript 
+                to your page for creating a Hello world! example. (Hello world! is the 
+                standard for introductory programming examples.)
+            </p>
+            <p>
+                Important: If you haven't been following along with the rest of our course, 
+                download this example code and use it as a starting point.
+            </p>
+            <ul>
+                <li>
+                Go to your test site and create a new folder named scripts. Within the scripts folder, 
+                create a new file called main.js, and save it.
+                </li>
+                <li>In your <code>index.html</code> file, enter this code on a new line, just before the closing <code>&lt;/body&gt;</code> tag:
+                    <pre class="brush: html notranslate line-numbers language-html"><code class=" language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>scripts/main.js<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span><span class="token script"></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">&gt;</span></span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+                </li>
+                <li>This is doing the same job as the <a href="/en-US/docs/Web/HTML/Element/link" title="The HTML External Resource Link element (<link>) specifies relationships between the current document and an external resource. This element is most commonly used to link to stylesheets, but is also used to establish site icons (both &quot;favicon&quot; style icons and icons for the home screen and apps on mobile devices) among other things."><code>&lt;link&gt;</code></a> element for CSS. It applies the JavaScript to the page, so it can have an effect on the HTML (along with the CSS, and anything else on the page).
+                </li>
+                <li>Add this code to the <code>main.js</code> file:
+                    <pre class="brush: js notranslate line-numbers language-js"><code class=" language-js"><span class="token keyword">const</span> myHeading <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">querySelector</span><span class="token punctuation">(</span><span class="token string">'h1'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+                    myHeading<span class="token punctuation">.</span>textContent <span class="token operator">=</span> <span class="token string">'Hello world!'</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+                </li>
+                <li>Make sure the HTML and JavaScript files are saved. Then load <code>index.html</code> in your browser. You should see something like this:<img alt="" src="https://mdn.mozillademos.org/files/9543/hello-world.png" style="display: block; height: 236px; margin: 0px auto; width: 806px;">
+                </li>
+            </ul>
+            </article>
+        </section>
+        <section class="main-section" id="language_basics_crash_course">
+            <header>Language basics crash course</header>
+            <article>
+            <p>
+                To give you a better understanding of how JavaScript works, 
+                let's explain some of the core features of the language. 
+                It's worth noting that these features are common to all 
+                programming languages. If you master these fundamentals, 
+                you have a head start on coding in other languages too!
+            </p>
+
+            <p><strong>Important</strong>: In this article, try entering the 
+            example code lines into your JavaScript console to see what happens. 
+            For more details on JavaScript consoles, 
+            see <a href="/en-US/Learn/Discover_browser_developer_tools">
+            Discover browser developer tools</a>.
+            </p>
+        </section>
+        <section class="main-section" id="variables">
+                <header>Variables</header>
+            <article>
+            <p><a href="/en-US/docs/Glossary/Variable">Variables</a> 
+            are containers that store values. You start by declaring a 
+            variable with the 
+            <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/var">var</a></code> 
+            (less recommended, dive deeper for the explanation) or the 
+            <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/let">
+            let</a></code> keyword, followed by the name you give to the variable:
+            </p>
+            <p><strong>Note</strong>: A semicolon at the end of a line indicates where 
+            a statement ends. It is only required when you need to separate statements 
+            on a single line. However, some people believe it's good practice to have 
+            semicolons at the end of each statement. There are other rules for when you 
+            should and shouldn't use semicolons. For more details, 
+            see <a class="external" href="http://news.codecademy.com/your-guide-to-semicolons-in-javascript/" rel="noopener">
+            Your Guide to Semicolons in JavaScript</a>.
+            </p>
+            </article>
+        </section>        
+        <section class="main-section" id="comments">
+            <header>Comments</header>
+            <article>
+            <p>Comments are snippets of text that can be added along with code. 
+                The browser ignores text marked as comments. You can write comments 
+                in JavaScript just as you can in CSS:</p>
+                <p>
+                    <code class=" language-js"><span class="token comment">/*
+                    Everything in between is a comment.
+                    */</span><span aria-hidden="true" class="line-numbers-rows">
+                    <span></span><span></span><span></span></span></code>
+                </p>
+                <p>If your comment contains no line breaks, it's an option to 
+                    put it behind two slashes like this:</p>
+                <p>
+                    <code class=" language-js"><span class="token comment">// This is a comment</span>
+                    <span aria-hidden="true" class="line-numbers-rows"><span></span></span></code>
+                </p>
+            </article>
+        </section>
+        <section class="main-section" id="operators">
+            <header>Operators</header>
+            <p>An <code><a href="/en-US/docs/Glossary/operator">operator</a></code> 
+            is a mathematical symbol that produces a result based on two values (or variables). 
+            In the following table, you can see some of the simplest operators, along with some 
+            examples to try in the JavaScript console.
+            </p>
+            <table class="standard-table">
+                    <thead>
+                    <tr>
+                    <th scope="row">Operator</th>
+                    <th scope="col">Explanation</th>
+                    <th scope="col">Symbol(s)</th>
+                    <th scope="col">Example</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                    <th scope="row">Addition</th>
+                    <td>Add two numbers together or combine two strings.</td>
+                    <td><code>+</code></td>
+                    <td><code>6 + 9;<br>
+                        'Hello ' + 'world!';</code></td>
+                    </tr>
+                    <tr>
+                    <th scope="row">Subtraction, Multiplication, Division</th>
+                    <td>These do what you'd expect them to do in basic math.</td>
+                    <td><code>-</code>, <code>*</code>, <code>/</code></td>
+                    <td><code>9 - 3;<br>
+                        8 * 2; // multiply in JS is an asterisk<br>
+                        9 / 3;</code></td>
+                    </tr>
+                    <tr>
+                    <th scope="row">Assignment</th>
+                    <td>As you've seen already: this assigns a value to a variable.</td>
+                    <td><code>=</code></td>
+                    <td><code>let myVariable = 'Bob';</code></td>
+                    </tr>
+                    <tr>
+                    <th scope="row">Equality</th>
+                    <td>This performs a test to see if two values are equal. It returns a <code>true</code>/<code>false</code> (Boolean) result.</td>
+                    <td><code>===</code></td>
+                    <td><code>let myVariable = 3;<br>
+                        myVariable === 4;</code></td>
+                    </tr>
+                    <tr>
+                    <th scope="row">Not, Does-not-equal</th>
+                    <td>This returns the logically opposite value of what it precedes. It turns a <code>true</code> into a <code>false</code>, etc.. When it is used alongside the Equality operator, the negation operator tests whether two values are <em>not</em> equal.</td>
+                    <td><code>!</code>, <code>!==</code></td>
+                    <td>
+                        <p>For "Not", the basic expression is <code>true</code>, but the comparison returns <code>false</code> because we negate it:</p>
+
+                        <p><code>let myVariable = 3;<br>
+                        !(myVariable === 3);</code></p>
+
+                        <p>"Does-not-equal" gives basically the same result with different syntax. Here we are testing "is <code>myVariable</code> NOT equal to 3". This returns<code> false</code> because <code>myVariable</code> IS equal to 3:</p>
+
+                        <p><code>let <code>myVariable = 3;</code><br>
+                        myVariable !== 3;</code></p>
+                    </td>
+                    </tr>
+                    </tbody>
+            </table>
+          <p>There are a lot more operators to explore, 
+              but this is enough for now. See <a href="/en-US/docs/Web/JavaScript/Reference/Operators">Expressions and operators</a> 
+              for a complete list.
+              </p>
+            
+            <p><strong>Note</strong>: Mixing data types can lead to some strange results 
+            when performing calculations. Be careful that you are referring to your variables 
+            correctly, and getting the results you expect. For example, 
+            enter <code>'35' + '25'</code> into your console. Why don't you get the result 
+            you expected? Because the quote marks turn the numbers into strings, 
+            so you've ended up concatenating strings rather than adding numbers. 
+            If you enter <code>35 + 25</code> you'll get the total of the two numbers.
+            </p>
+        </section>
+         <section class="main-section" id="reference">
+        
+            <header>Reference</header>
+            <article>
+            <ul>
+                <li>
+                All the documentation in this page is taken from
+                <a href="https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/JavaScript_basics" target="_blank">MDN</a>
+                </li>
+            </ul>
+            </article>
+        </section>
+    </main>
+</body>
+</html>

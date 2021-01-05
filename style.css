@@ -1,0 +1,77 @@
+
+
+
+#main {
+    margin: 24px 8px;
+    padding: 16px;
+    border-radius: 8px;
+    background: rgb(250, 246, 246);
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+h1 {
+    font-size: 4rem;
+    margin-bottom: 0;
+}
+#img-div {
+    background: white;
+    padding: 10px;
+    margin: 0;
+}
+#img-caption {
+    margin: 15px 15px 5px 85px;
+    align-items: center;
+}
+img {
+    max-width: 100%;
+    display: block;
+    height: auto;
+    margin: 0 auto;
+}
+
+body{ 
+    background: darkgrey;
+}
+.container{
+    width: 100%;
+    margin: 3.125rem auto 0 auto;
+    
+}
+header {
+    padding: 0 0.625rem;
+    margin-bottom: 1.875rem;
+    display: block;
+    text-align: center;
+}
+
+form {
+    background: wheat;
+    padding: 24px;
+    border-radius: 0.25rem;
+    display: flex;
+    flex-direction: column;
+    margin: 16px 256px;
+}
+#data{
+    display: flex;
+    flex-direction: column;
+    margin: 16px 8px 8px 0px;
+}
+#name-label, #email-label, #number-label{
+    margin: 8px 0px;
+    display: block;
+    width: 100%;
+    
+}
+#suggestions{
+    margin-bottom: 16px ;
+}
+#submit{
+    max-width: 124px;
+    align-self:  center;
+    background: green;
+    padding: 8px;
+    border-radius: 0.25rem;
+}

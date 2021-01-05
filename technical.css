@@ -1,0 +1,81 @@
+body {
+    min-width: 290px;
+    color: #4d4e53;
+    background-color: #ffffff;
+    line-height: 1.5;
+    display: block;
+    margin: 8px;
+}
+#navbar{
+
+    position: fixed;
+    min-width: 290px;
+    top: 0px;
+    left: 0px;
+    width: 300px;
+    height: 100%;
+    border-right: solid;
+    border-color: rgba(0, 22, 22, 0.4);
+    padding: 8px;
+}
+#main-doc{
+    position: absolute;
+    margin-left: 310px;
+    padding: 20px;
+    margin-bottom: 110px;
+}
+#navbar ul{
+    height: 88%;
+    padding: 8px;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+header{
+    color: black;
+    margin: 10px;
+    text-align: center;
+    font-size: 1.8em;
+}
+#navbar li {
+    color: #4d4e53;
+    border-top: 1px solid;
+    text-decoration: none;
+    position: relative;
+    width: 100%;
+}
+#navbar a {
+    display: block;
+    padding: 10px 30px;
+    color: #4d4e53;
+    text-decoration: none;
+    cursor: pointer;
+}
+section {
+    display: block;
+}
+#main-doc header {
+    text-align: left;
+    margin: 0px;
+}
+section article {
+    color: #4d4e53;
+    margin: 15px;
+    font-size: 0.96em;
+}
+
+.standard-table td, .text-content th {
+    border: 2px solid #fff;
+    border-bottom: 2px solid #d4dde4;
+    background: #eaeef2;
+    background: rgba(212,221,228,.5);
+    padding: 2px 8px 4px;
+    font-family: x-locale-heading-primary,zillaslab,Palatino,"Palatino Linotype",x-locale-heading-secondary,serif;
+    font-weight: 700;
+}
+@media (max-width: 767px), (max-height: 440px){
+  body{
+    min-width: 320px;
+    touch-action: manipulation;
+    font-size: 13px;
+}
+}

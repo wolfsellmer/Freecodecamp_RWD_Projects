@@ -1,0 +1,121 @@
+
+body {
+    background-image: url("https://images.unsplash.com/photo-1541916194682-cbf2a0371d3d?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    
+  }
+
+#header{
+    position: fixed;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 98vw;
+    
+}
+img{
+    max-width: 85px;
+}
+
+
+#header-img{
+    max-width: 48px;
+    margin: 16px;
+    border-radius: 50%;
+}
+.logo{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+h1{
+    color: white;
+    margin-left: 8px;
+}
+ul{
+    display: flex;
+    flex-direction: row;
+    list-style-type: none;
+   
+}
+.nav-link{
+    margin: 16px;
+    font-size: 24px;
+    color: black;
+    text-decoration: none;
+    
+    
+}
+.grid{
+    display: flex;
+       
+}
+.icon{
+    margin: 16px;
+}
+#products{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+    margin-top: 180px;
+}
+
+
+section{
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+    
+    width: 100%;
+ 
+}
+.form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    height: 200px;
+    margin-top: 50px;
+    color: rgb(255, 255, 255);
+}
+form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    height: 20px;
+    margin-top: 24px;
+}
+#email {
+    width: 248px;
+    padding: 8px;
+    margin-bottom: 8px;
+}
+#submit, .button{
+    width: 148px;
+    padding: 4px;
+    margin-bottom: 8px;
+    background-color: green;
+}
+.product{
+    padding: 8px;
+    color: rgb(255, 255, 255);
+
+}
+
+@media (max-width: 767px), (max-height: 440px){
+body {
+    min-width: 320px;
+    -ms-touch-action: manipulation;
+    touch-action: manipulation;
+}
+}
